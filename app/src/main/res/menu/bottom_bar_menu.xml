@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    >
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_icon"
+        android:enabled="true"
+
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/browseFragment2"
+        android:icon="@drawable/browse_icon"
+        android:enabled="true"
+
+        android:title="@string/browse" />
+
+    <item
+        android:id="@+id/wishlistFragment2"
+        android:icon="@drawable/wishlist_icon"
+        android:enabled="true"
+
+        android:title="@string/wishlist" />
+
+    <item
+        android:id="@+id/profileFragment3"
+        android:icon="@drawable/profile_icon"
+        android:enabled="true"
+
+        android:title="@string/profile" />
+
+</menu>

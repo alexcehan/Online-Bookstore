@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".gui.ProfileFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="131dp"
+            android:src="@drawable/profilepicture"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="64dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Jessica Mapleton"
+            android:layout_marginTop="211dp"
+            android:lineSpacingExtra="-5sp"
+            android:gravity="center_horizontal|top"
+            android:textSize="31.25sp"
+            android:lineHeight="36sp"
+            android:fontFamily="@font/play_bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Cape Town, South Africa"
+            android:layout_marginTop="255dp"
+            android:letterSpacing="0.16"
+            android:gravity="center_horizontal|top"
+            android:textSize="10sp"
+            android:lineHeight="12sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="#828282"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_following"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/user_followers"
+            android:layout_marginTop="291dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Following"
+                android:fontFamily="@font/montserrat_regular"
+                android:lineHeight="12sp"
+                android:textSize="10sp"
+                android:textColor="#4F4F4F"
+                android:layout_gravity="center_horizontal|top"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2,1k"
+                android:fontFamily="@font/play_bold"
+                android:textColor="@color/black"
+                android:lineHeight="24sp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal|top"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_followers"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/user_following"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="291dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                android:fontFamily="@font/montserrat_regular"
+                android:lineHeight="12sp"
+                android:textSize="10sp"
+                android:textColor="#4F4F4F"
+                android:layout_gravity="center_horizontal|top"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="945k"
+                android:fontFamily="@font/play_bold"
+                android:textColor="@color/black"
+                android:lineHeight="24sp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal|top"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Favorite Genres"
+            android:layout_marginTop="383dp"
+            android:layout_marginStart="24dp"
+            android:lineHeight="20sp"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#333333"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="401dp"
+            >
+
+            <TextView
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/african_genre"
+                android:text="African"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/classics_genre"
+                android:paddingVertical="5dp"
+                android:layout_marginVertical="21dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rectangleafrican"
+                android:gravity="center"
+                android:lineHeight="15sp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="81dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/classics_genre"
+                android:text="Classics"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/african_genre"
+                android:layout_marginStart="8dp"
+                android:paddingVertical="5dp"
+                android:layout_marginVertical="21dp"
+                android:background="@drawable/rectangleclassics"
+                android:gravity="center"
+                android:lineHeight="15sp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/contemporary_genre"
+                android:text="Contemporary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/classics_genre"
+                android:paddingVertical="5dp"
+                android:layout_marginVertical="21dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rectanglecontemporary"
+                android:gravity="center"
+                android:lineHeight="15sp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/feminist_literature_genre"
+                android:text="Feminist Literature"
+                app:layout_constraintTop_toBottomOf="@id/african_genre"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingVertical="5dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/rectanglefeminist"
+                android:gravity="center"
+                android:lineHeight="15sp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/memoirs_genre"
+                android:text="Memoirs"
+                app:layout_constraintTop_toBottomOf="@id/african_genre"
+                app:layout_constraintStart_toEndOf="@id/feminist_literature_genre"
+                android:paddingVertical="5dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rectanglememoirs"
+                android:gravity="center"
+                android:lineHeight="15sp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/psychological_thrillers_genre"
+                android:text="Psychological Thrillers"
+                app:layout_constraintTop_toBottomOf="@id/feminist_literature_genre"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingVertical="5dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/rectanglepsycological"
+                android:gravity="center"
+                android:lineHeight="15sp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/true_crime_genre"
+                android:text="True Crime"
+                app:layout_constraintTop_toBottomOf="@id/feminist_literature_genre"
+                app:layout_constraintStart_toEndOf="@id/psychological_thrillers_genre"
+                android:paddingVertical="5dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rectangletruecrime"
+                android:gravity="center"
+                android:lineHeight="15sp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/purchased_books"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="555dp"
+            android:layout_marginStart="24dp"
+            android:text="Purchased Books"
+            android:height="20sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/purchased_books"
+            android:layout_marginTop="555dp"
+            android:layout_marginStart="8dp"
+            android:text="19"
+            android:height="17sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="12sp"
+            android:textColor="#333333"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="591dp"
+            android:layout_marginStart="24dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="131dp"
+                    android:layout_height="265dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:layout_width="134dp"
+                        android:layout_height="201dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/littlefireseverywhere"
+                        android:elevation="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Little Fires\nEverywhere"
+                        android:layout_marginTop="7dp"
+                        android:lineHeight="21sp"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/play_bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celeste Ng"
+                        android:layout_marginTop="0dp"
+                        android:lineHeight="17sp"
+                        android:textSize="12sp"
+                        android:translationY="-1.09sp"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="#4F4F4F"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="131dp"
+                    android:layout_height="265dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="201dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/alltheprettyhorses"
+                        android:elevation="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All the Pretty\nHorses"
+                        android:layout_marginTop="7dp"
+                        android:lineHeight="21sp"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/play_bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cormac McCarthy"
+                        android:layout_marginTop="0dp"
+                        android:lineHeight="17sp"
+                        android:textSize="12sp"
+                        android:translationY="-1.09sp"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="#4F4F4F"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:layout_width="134dp"
+                        android:layout_height="201dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/thehandmaidtale"
+                        android:elevation="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Little Fires\nEverywhere"
+                        android:layout_marginTop="7dp"
+                        android:lineHeight="21sp"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/play_bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celeste Ng"
+                        android:layout_marginTop="0dp"
+                        android:lineHeight="17sp"
+                        android:textSize="12sp"
+                        android:translationY="-1.09sp"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="#4F4F4F"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="15dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="124dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/thegreatgatsby"
+                        android:padding="0dp"
+                        android:elevation="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Little Fires\nEverywhere"
+                        android:layout_marginTop="7dp"
+                        android:lineHeight="21sp"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/play_bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celeste Ng"
+                        android:layout_marginTop="0dp"
+                        android:lineHeight="17sp"
+                        android:textSize="12sp"
+                        android:translationY="-1.09sp"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="#4F4F4F"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="882dp"
+            android:text="@string/view_purchased_books"
+            android:fontFamily="@font/montserrat_bold"
+            android:lineHeight="17sp"
+            android:textSize="12sp"
+            android:textColor="#D96F6E"
+            android:translationY="-1.09sp"
+            android:lineSpacingExtra="2sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wishlist_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="947dp"
+            android:layout_marginStart="24dp"
+            android:text="Wishlist"
+            android:height="20sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/wishlist_title"
+            android:layout_marginTop="947dp"
+            android:layout_marginStart="8dp"
+            android:text="24"
+            android:height="17sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="12sp"
+            android:textColor="#333333"/>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:id="@+id/wishlist_books"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="983dp">
+            
+            <ImageView
+                android:layout_width="104dp"
+                android:layout_height="160dp"
+                android:id="@+id/book1"
+                android:background="@drawable/book1"
+                android:elevation="10dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="104dp"
+                android:layout_height="157dp"
+                android:id="@+id/book2"
+                android:background="@drawable/book2"
+                android:elevation="10dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="104dp"
+                android:layout_height="138dp"
+                android:id="@+id/book3"
+                android:background="@drawable/book3"
+                android:elevation="10dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="104dp"
+                android:layout_height="160dp"
+                android:id="@+id/book4"
+                android:background="@drawable/book4"
+                android:elevation="10dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="104dp"
+                android:layout_height="151dp"
+                android:id="@+id/book5"
+                android:background="@drawable/book5"
+                android:elevation="10dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="104dp"
+                android:layout_height="157dp"
+                android:id="@+id/book6"
+                android:background="@drawable/book6"
+                android:elevation="10dp"
+                android:scaleType="centerCrop"/>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:flow_wrapMode="chain"
+                app:flow_horizontalStyle="spread"
+                app:constraint_referenced_ids="book1,book2,book3,book4,book5,book6"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/wishlist_books"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="24dp"
+            android:text="@string/view_wishlist_books"
+            android:fontFamily="@font/montserrat_bold"
+            android:lineHeight="17sp"
+            android:textSize="12sp"
+            android:textColor="#D96F6E"
+            android:translationY="-1.09sp"
+            android:lineSpacingExtra="2sp"/>
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

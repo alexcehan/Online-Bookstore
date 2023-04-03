@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Online-Bookstore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello Home fragment</string>
+    <string name="home">Home</string>
+    <string name="browse">Browse</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="profile">Profile</string>
+    <string name="welcome_string">Welcome back,\n Jessica!</string>
+    <string name="days_count_string">We’re glad to see you just <b>16 days</b> after your last visit and can’t wait to help you find your next page turner!</string>
+    <string name="view_purchased_books"><u>View all Purchased Books</u>></string>
+    <string name="view_wishlist_books"><u>View all Wishlist Books</u>></string>
+    <string name="book_desciption">A blurb about the book goes here. A few sentences that are nice and easy to read. Like one that’s enticing... read more</string>
+    <string name="book_meta">Publisher: Faber &amp; Faber\nDate Published: 1 March 2018\nISBN13: 9780571333134</string>
+
+</resources>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".gui.BookFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E5E5E5">
+
+        <ImageView
+            android:layout_width="142dp"
+            android:layout_height="216dp"
+            android:src="@drawable/conv_with_friends"
+            android:layout_marginStart="116dp"
+            android:layout_marginEnd="116dp"
+            android:layout_marginTop="48dp"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conversations with Friends"
+            android:layout_marginTop="272dp"
+            android:lineHeight="33sp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/play_bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sally Rooney"
+            android:layout_marginTop="305dp"
+            android:lineHeight="24sp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal|top"
+            android:fontFamily="@font/montserrat_regular"
+            android:translationY="-2.25sp"
+            android:lineSpacingExtra="4sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paperback  |  2nd Edition"
+            android:layout_marginTop="331dp"
+            android:lineHeight="17sp"
+            android:textSize="12sp"
+            android:textColor="#828282"
+            android:gravity="center_horizontal|top"
+            android:fontFamily="@font/montserrat_regular"
+            android:translationY="-1.09sp"
+            android:lineSpacingExtra="2sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€12.90"
+            android:layout_marginTop="356dp"
+            android:lineHeight="33sp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/play_bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book_desciption"
+            android:layout_marginTop="397dp"
+            android:layout_marginHorizontal="24dp"
+            android:lineHeight="24sp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal|top"
+            android:fontFamily="@font/montserrat_regular"
+            android:translationY="-2.25sp"
+            android:lineSpacingExtra="4sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_to_cart_button"
+            android:layout_marginTop="480dp"
+            android:background="@drawable/rectanglebutton"
+            android:text="ADD TO CHART"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="16sp"
+            android:lineHeight="20sp"
+            android:letterSpacing="0.1"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectanglebutton"
+            android:text="WISHLIST"
+            android:textColor="@color/white"
+            android:backgroundTint="#F3A492"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="16sp"
+            android:lineHeight="20sp"
+            android:letterSpacing="0.1"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_to_cart_button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_meta"
+            android:layout_marginTop="611dp"
+            android:lineHeight="17sp"
+            android:textSize="12sp"
+            android:textColor="#828282"
+            android:gravity="center_horizontal|top"
+            android:fontFamily="@font/montserrat_regular"
+            android:translationY="-1.09sp"
+            android:lineSpacingExtra="2sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genres:"
+            android:layout_marginTop="686dp"
+            android:lineHeight="33sp"
+            android:textSize="16sp"
+            android:textColor="#4F4F4F"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/contemporary_genre"
+            android:text="Contemporary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/general_fiction_genre"
+            android:paddingVertical="5dp"
+            android:layout_marginTop="714dp"
+            android:layout_marginStart="58dp"
+            android:background="@drawable/rectanglecontemporary"
+            android:gravity="center"
+            android:lineHeight="15sp"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/general_fiction_genre"
+            android:text="General Fiction"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/contemporary_genre"
+            android:paddingVertical="5dp"
+            android:layout_marginTop="714dp"
+            android:layout_marginEnd="58dp"
+            android:background="@drawable/rectanglegeneralfiction"
+            android:gravity="center"
+            android:lineHeight="15sp"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share this book:"
+            android:layout_marginTop="770dp"
+            android:lineHeight="33sp"
+            android:textSize="16sp"
+            android:textColor="#4F4F4F"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wishlist_books"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="51dp"
+            android:layout_marginTop="799dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/socialnetwork1"
+                android:background="@drawable/facebookicon"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/socialnetwork2"
+                android:background="@drawable/instagramicon"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/socialnetwork3"
+                android:background="@drawable/twittericon"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/socialnetwork4"
+                android:background="@drawable/emailicon"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/socialnetwork5"
+                android:background="@drawable/linkicon"
+                android:scaleType="centerCrop"/>
+
+
+
+
+
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:flow_wrapMode="chain"
+                app:flow_horizontalStyle="spread"
+                app:constraint_referenced_ids="socialnetwork1,socialnetwork2,socialnetwork3,socialnetwork4,socialnetwork5"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="871dp"
+            android:layout_marginStart="24dp"
+            android:text="Similar Publications:"
+            android:fontFamily="@font/play_bold"
+
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="914dp"
+            android:layout_marginBottom="44dp"
+            android:layout_marginStart="24dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="201dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/promisingyoungwomen"
+                        android:elevation="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Promising Young\nWomen"
+                        android:layout_marginTop="7dp"
+                        android:lineHeight="21sp"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/play_bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Caroline O’Donoghue"
+                        android:layout_marginTop="0dp"
+                        android:lineHeight="17sp"
+                        android:textSize="12sp"
+                        android:translationY="-1.09sp"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="#4F4F4F"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="€9.80"
+                        android:lineHeight="15sp"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#D96F6E"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="201dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/careersforwomen"
+                        android:elevation="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carrers for Women"
+                        android:layout_marginTop="7dp"
+                        android:lineHeight="21sp"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/play_bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Joanna Scott"
+                        android:layout_marginTop="0dp"
+                        android:lineHeight="17sp"
+                        android:textSize="12sp"
+                        android:translationY="-1.09sp"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="#4F4F4F"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="€10.50"
+                        android:lineHeight="15sp"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#D96F6E"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="201dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/thesewalls"
+                        android:elevation="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inside These Walls"
+                        android:layout_marginTop="7dp"
+                        android:lineHeight="21sp"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/play_bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rebecca Coleman"
+                        android:layout_marginTop="0dp"
+                        android:lineHeight="17sp"
+                        android:textSize="12sp"
+                        android:translationY="-1.09sp"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="top"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="#4F4F4F"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="€8.20"
+                        android:lineHeight="15sp"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#D96F6E"/>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </HorizontalScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
