@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="bookEntity"
+            type="com.hfad.online_bookstore.data.pojos.BookEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="8dp"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:background="#FAF8F7"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewCover"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/play_bold"
+                android:text="@{bookEntity.title}"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCover"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textViewAuthor"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text="@{bookEntity.author_name[0]}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCover"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/hardTextViewYear"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text="Year:"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCover"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAuthor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textViewYear"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text="@{Integer.toString(bookEntity.first_publish_year)}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/hardTextViewYear"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAuthor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/hardTextViewRating"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text="Rating:"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCover"
+                app:layout_constraintTop_toBottomOf="@+id/textViewYear" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textViewRating"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text='@{String.format("%.2f", bookEntity.ratings_average)}'
+
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/hardTextViewRating"
+                app:layout_constraintTop_toBottomOf="@+id/textViewYear" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/hardTextPrice"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text="Price:"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCover"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRating" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textViewPrice"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text='@{String.format("$%.2f", bookEntity.price)}'
+
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/hardTextISBN"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRating" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/hardTextISBN"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text="ISBN:"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCover"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textViewIsbn"
+
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text='@{bookEntity.isbn[0]}'
+
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/hardTextISBN"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrice" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</layout>
+
+
+
+

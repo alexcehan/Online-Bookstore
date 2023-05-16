@@ -15,7 +15,7 @@
         android:title="@string/home" />
 
     <item
-        android:id="@+id/browseFragment2"
+        android:id="@+id/browseFragment"
         android:icon="@drawable/browse_icon"
         android:enabled="true"
 

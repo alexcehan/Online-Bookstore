@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="book"
+            type="com.hfad.online_bookstore.data.entities.Book" />
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+
+
+
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="4dp"
+        android:elevation="6dp"
+        app:cardCornerRadius="6dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:id="@+id/buyed_book_number"
+                android:text="@{position.toString()}"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeStepGranularity="2sp"
+                android:paddingHorizontal="4dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="start|center_vertical"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:id="@+id/buyed_book_name"
+                android:text="@{book.bookTitle}"
+                android:autoSizeTextType="uniform"
+                android:maxLines="2"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeStepGranularity="2sp"
+
+                android:paddingHorizontal="4dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="start|center_vertical"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:maxLines="1"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeMaxTextSize="22sp"
+                android:autoSizeStepGranularity="2sp"
+                android:id="@+id/buyed_book_author"
+                android:text="@{book.bookAuthor}"
+                android:autoSizeTextType="uniform"
+
+                android:paddingHorizontal="4dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="start|center_vertical"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

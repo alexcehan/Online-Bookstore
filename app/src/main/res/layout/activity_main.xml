@@ -13,11 +13,17 @@
         style="@style/Widget.MaterialComponents.Toolbar.Primary"
         android:background="@color/material_dynamic_neutral95"
         app:titleTextColor="#000000"
+        app:subtitleTextColor="@color/black"
+        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"

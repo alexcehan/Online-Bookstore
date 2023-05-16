@@ -9,44 +9,68 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.hfad.online_bookstore.gui.HomeFragment"
+        android:name="com.hfad.online_bookstore.presentation.ui.view.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_bookFragment2"
-            app:destination="@id/bookFragment2"
-            app:popUpTo="@id/homeFragment"
-            app:popUpToInclusive="true" />
+
     </fragment>
     <fragment
         android:id="@+id/profileFragment3"
-        android:name="com.hfad.online_bookstore.gui.ProfileFragment"
+        android:name="com.hfad.online_bookstore.presentation.ui.view.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment3_to_buyedBooksFragment"
+            app:destination="@id/buyedBooksFragment"
+            app:popUpTo="@id/profileFragment3"/>
+    </fragment>
     <fragment
-        android:id="@+id/browseFragment2"
-        android:name="com.hfad.online_bookstore.gui.BrowseFragment"
+        android:id="@+id/browseFragment"
+        android:name="com.hfad.online_bookstore.presentation.ui.view.BrowseFragment"
         android:label="Browse"
-        tools:layout="@layout/fragment_browse" />
+        tools:layout="@layout/fragment_browse" >
+        <action
+            android:id="@+id/action_browseFragment2_to_bookFragment2"
+            app:destination="@id/bookFragment2"
+            app:popUpTo="@id/bookFragment2"
+            app:popUpToInclusive="true"
+             />
+    </fragment>
     <fragment
         android:id="@+id/wishlistFragment2"
-        android:name="com.hfad.online_bookstore.gui.WishlistFragment"
+        android:name="com.hfad.online_bookstore.presentation.ui.view.WishlistFragment"
         android:label="Wishlist"
         tools:layout="@layout/fragment_wishlist" />
     <fragment
         android:id="@+id/shoppingCartFragment"
-        android:name="com.hfad.online_bookstore.gui.ShoppingCartFragment"
-        android:label="fragment_shopping_cart"
-        tools:layout="@layout/fragment_shopping_cart" />
-    <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.hfad.online_bookstore.gui.SearchFragment"
-        android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        android:name="com.hfad.online_bookstore.presentation.ui.view.ShoppingCartFragment"
+        android:label="Shopping Cart"
+        tools:layout="@layout/fragment_shopping_cart" >
+        <action
+            android:id="@+id/action_shoppingCartFragment_to_purchaseSuccesfullFragment"
+            app:destination="@id/purchaseSuccesfullFragment"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
     <fragment
         android:id="@+id/bookFragment2"
-        android:name="com.hfad.online_bookstore.gui.BookFragment"
+        android:name="com.hfad.online_bookstore.presentation.ui.view.BookFragment"
         android:label=""
-        tools:layout="@layout/fragment_book" />
+        tools:layout="@layout/fragment_book">
+
+        <argument
+            android:name="bookEntity"
+            app:argType="com.hfad.online_bookstore.data.pojos.BookEntity"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseSuccesfullFragment"
+        android:name="com.hfad.online_bookstore.presentation.ui.view.PurchaseSuccesfullFragment"
+        android:label="fragment_purchase_succesfull"
+        tools:layout="@layout/fragment_purchase_succesfull" />
+    <fragment
+        android:id="@+id/buyedBooksFragment"
+        android:name="com.hfad.online_bookstore.presentation.ui.view.BuyedBooksFragment"
+        android:label="fragment_buyed_books"
+        tools:layout="@layout/fragment_buyed_books" />
 
 </navigation>

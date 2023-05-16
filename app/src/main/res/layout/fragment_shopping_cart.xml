@@ -1,14 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".gui.ShoppingCartFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.view.ShoppingCartFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="viewModel"
+            type="com.hfad.online_bookstore.presentation.ui.viewmodel.ShopAndWishListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollViewRecycler"
+            android:background="#E5E5E5"
+            android:padding="10dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:paddingBottom="65dp"
+                android:clipToPadding="false"
+                android:id="@+id/returned_book_list"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="1"
+
+                />
+
+
+        </ScrollView>
+        <TextView
+            android:id="@+id/totalToPayHardText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:text="Total to Pay"
+            android:gravity="start"
+            android:padding="4dp"
+            app:layout_constraintBottom_toTopOf="@id/payCartButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/totalAmountToBePayed"/>
+        <TextView
+            android:id="@+id/totalAmountToBePayed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:text='@{String.format("$%.2f", viewModel.totalToPayForCart)}'
+            android:gravity="end"
+            android:padding="4dp"
+            app:layout_constraintBottom_toTopOf="@id/payCartButton"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/payCartButton"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Pay"
+            android:background="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</layout>
