@@ -62,6 +62,12 @@ interface BookDbDao {
     @Query("SELECT * FROM books INNER JOIN buyed_books ON books.bookId = buyed_books.bookId")
     fun getAllThePurchasedBooks(): LiveData<List<Book>>
 
+    @Query("SELECT COUNT(*) from books inner join buyed_books on books.bookId = buyed_books.bookId")
+    fun getCountOfAllBuyedBooks(): LiveData<Long>
+
+    @Query("SELECT COUNT(*) from books inner join wishlist on books.bookId = wishlist.bookId")
+    fun getCountOfAllWishlistBooks(): LiveData<Long>
+
 
 
 

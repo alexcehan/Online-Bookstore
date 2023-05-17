@@ -23,6 +23,10 @@
             android:id="@+id/action_profileFragment3_to_buyedBooksFragment"
             app:destination="@id/buyedBooksFragment"
             app:popUpTo="@id/profileFragment3"/>
+        <action
+            android:id="@+id/action_profileFragment3_to_wishlistFragment2"
+            app:destination="@id/wishlistFragment2"
+            app:popUpTo="@id/profileFragment3"/>
     </fragment>
     <fragment
         android:id="@+id/browseFragment"
@@ -65,12 +69,12 @@
     <fragment
         android:id="@+id/purchaseSuccesfullFragment"
         android:name="com.hfad.online_bookstore.presentation.ui.view.PurchaseSuccesfullFragment"
-        android:label="fragment_purchase_succesfull"
+        android:label="Purchased Book"
         tools:layout="@layout/fragment_purchase_succesfull" />
     <fragment
         android:id="@+id/buyedBooksFragment"
         android:name="com.hfad.online_bookstore.presentation.ui.view.BuyedBooksFragment"
-        android:label="fragment_buyed_books"
+        android:label="Purchased Books"
         tools:layout="@layout/fragment_buyed_books" />
 
 </navigation>

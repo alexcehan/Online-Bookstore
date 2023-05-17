@@ -1,6 +1,7 @@
 package com.hfad.online_bookstore.presentation.ui.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.lifecycle.Observer
 import com.hfad.online_bookstore.R
 import com.hfad.online_bookstore.databinding.FragmentBuyedBooksBinding
 import com.hfad.online_bookstore.presentation.ui.adapter.BuyedBookItemAdapter
+import com.hfad.online_bookstore.presentation.ui.adapter.BuyedBookItemWithCoverAdapter
 import com.hfad.online_bookstore.presentation.ui.viewmodel.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -28,13 +30,16 @@ class BuyedBooksFragment : Fragment() {
         val view = binding.root
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+
         val adapter = BuyedBookItemAdapter()
         binding.returnedBookList.adapter = adapter
 
 
         viewModel.allBuyedBooks.observe(viewLifecycleOwner, Observer {
             it?.let {
+                Log.e("Item with cover", "The list is not null in BuyedFragment")
                 adapter.submitList(it)
+
             }
         })
 
